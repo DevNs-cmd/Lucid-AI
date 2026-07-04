@@ -1,4 +1,4 @@
-# Lucid AI — Working MVP
+# Lucid AI
 
 This is a **fully functional, end-to-end working version** of the Lucid AI core loop:
 sign up → log in → create a world → the Story AI generates an opening scene + an NPC →
