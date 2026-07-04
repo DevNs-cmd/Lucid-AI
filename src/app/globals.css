@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0a0813;
+  --ink-2: #120f22;
+  --ink-3: #191430;
+  --veil: #241c40;
+  --parchment: #f1ecfb;
+  --parchment-dim: #b9b0d6;
+  --arcane: #8b5cf6;
+  --arcane-bright: #b794f6;
+  --ember: #e0a5ff;
+  --gold: #d4af6a;
+  --success: #6ee7b7;
+  --danger: #f87171;
+  --border-glow: rgba(139, 92, 246, 0.25);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-veil: var(--veil);
+  --color-parchment: var(--parchment);
+  --color-parchment-dim: var(--parchment-dim);
+  --color-arcane: var(--arcane);
+  --color-arcane-bright: var(--arcane-bright);
+  --color-ember: var(--ember);
+  --color-gold: var(--gold);
+}
+
+html {
+  background: var(--ink);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--ink);
+  color: var(--parchment);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.font-display {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  letter-spacing: 0.02em;
+}
+
+.bg-runes {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(224, 165, 255, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(139, 92, 246, 0.10) 0%, transparent 50%);
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(36, 28, 64, 0.6), rgba(18, 15, 34, 0.6));
+  border: 1px solid rgba(139, 92, 246, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.glow-border {
+  box-shadow: 0 0 0 1px var(--border-glow), 0 8px 30px -8px rgba(139, 92, 246, 0.35);
+}
+
+::selection {
+  background: var(--arcane);
+  color: var(--ink);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--veil);
+  border-radius: 999px;
+}
